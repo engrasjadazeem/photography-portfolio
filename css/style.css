@@ -988,4 +988,8 @@ p {
 .portrait-override {
   width: 100% !important;
 }
+
+.reduce-txt-size {
+  font-size: 10px;
+}
 /*# sourceMappingURL=style.css.map */

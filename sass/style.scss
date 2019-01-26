@@ -33,7 +33,7 @@ $font-secondary: 'Roboto', sans-serif;;
     -ms-transition: 		all $transition $ease;
     transition:         all $transition $ease;
 }
-@mixin fh5co-translateX($translatex) {
+@mixin translateX($translatex) {
 	-moz-transform: translateX($translatex);
 	-webkit-transform: translateX($translatex);
 	-ms-transform: translateX($translatex);
@@ -108,7 +108,7 @@ body {
 	line-height: 1.5;
 	color: #7a7e89;
 	background: #f7f7f7;
-	&.fh5co-overflow {
+	&.overflow {
 		overflow-x: auto;	
 	}
 }
@@ -287,7 +287,7 @@ p {
   }
 }
 
-#fh5co-header {
+#header {
 	position: absolute;
 	top: 20px;
 	left: 0;
@@ -299,7 +299,7 @@ p {
 		background: $brand-white;
 		top: 0;
 	}
-	#fh5co-logo {
+	#logo {
 		float: left;
 		line-height: 1.2;
 		position: relative;
@@ -318,7 +318,7 @@ p {
 			}
 		}
 	}
-	#fh5co-main-nav {
+	#main-nav {
 		float: right;
 		@media screen and (max-width :$screen-sm) {
 			display: none;
@@ -360,7 +360,7 @@ p {
 		box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
 		top: 0;
 		left: 0px;
-		#fh5co-logo {
+		#logo {
 			float: left;
 			line-height: 1.2;
 			a {
@@ -370,7 +370,7 @@ p {
 			}
 		}
 
-		#fh5co-main-nav {
+		#main-nav {
 			ul {
 				li {
 					a {
@@ -399,7 +399,7 @@ p {
 /*
  * Flexslider
  */
-#fh5co-home { 
+#home { 
 	min-height: 700px;
 	background: $brand-white url(../images/loader.gif) no-repeat center center;
 
@@ -409,7 +409,7 @@ p {
 		z-index: 1;
 		margin-bottom: 0;
 
-		.fh5co-text {
+		.text {
 			position: absolute;
 			z-index: 3;
 			width: 100%;
@@ -436,7 +436,7 @@ p {
 					font-size: 30px;
 				}
 			}
-			.fh5co-go {
+			.go {
 				margin-top: 30px;
 				a {
 					font-family: $font-secondary;
@@ -484,7 +484,7 @@ p {
 				background-size: cover;
 			}
 		}
-		.fh5co-overlay {
+		.overlay {
 			position: absolute;
 			z-index: 3;
 			top: 0;
@@ -501,12 +501,12 @@ p {
 	}
 }
 
-#fh5co-main,
-#fh5co-offcanvas {
+#main,
+#offcanvas {
 	@include transition(.8s);
 }
 
-#fh5co-offcanvas {
+#offcanvas {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -516,7 +516,7 @@ p {
 	background: #444853;
 	overflow-y: auto;
 	padding: 50px 30px 30px 30px;
-	.fh5co-offcanvas-close {
+	.offcanvas-close {
 		position: absolute;
 		top: 20px;
 		right: 30px;
@@ -533,7 +533,7 @@ p {
 			}
 		}
 	}
-	@include fh5co-translateX(275px);
+	@include translateX(275px);
 	nav {
 		ul {
 			padding: 0;
@@ -559,45 +559,45 @@ p {
 		}
 	}
 	.offcanvas-visible & {
-		@include fh5co-translateX(0px);
+		@include translateX(0px);
 	}
 }
-#fh5co-main {
+#main {
 	// @media screen and(max-width: $screen-sm) {
 	// 	@include transition(.8s);
-	// 	@include fh5co-translateX(0px);	
+	// 	@include translateX(0px);	
 	// }
 	// .offcanvas-visible & {
-		// @include fh5co-translateX(-275px);	
+		// @include translateX(-275px);	
 	// }
 }
 
-#fh5co-portfolio,
-#fh5co-about,
-#fh5co-contact,
-#fh5co-testimony,
-#fh5co-content {
+#portfolio,
+#about,
+#contact,
+#testimony,
+#content {
 	padding: 7em 0;
 	@media screen and (max-width: $screen-sm) {
 		padding: 4em 0;
 	}
 }
-#fh5co-content {
+#content {
 	figure {
 		margin-bottom: 30px;
 	}
 }
-#fh5co-about {
+#about {
 	background: #444853;
 	h2 {
 		color: $brand-white;
 	}
-	.fh5co-text {
+	.text {
 		padding-left: 4em;
 		@media screen and (max-width: $screen-md) {
 			padding: 0 0 20px 0;
 		}
-		.fh5co-meta {
+		.meta {
 			color: rgba(255,255,255,.2);
 			text-transform: uppercase;
 			letter-spacing: 2px;
@@ -632,7 +632,7 @@ p {
 	}
 }
 
-#fh5co-testimony {
+#testimony {
 	background-color: transparent;
 	background-size: cover;
 	background-attachment: fixed;
@@ -642,7 +642,7 @@ p {
 		position: relative;
 		z-index: 5;
 	}
-	> .fh5co-overlay {
+	> .overlay {
 		position: absolute;
 		top: 0; 
 		left: 0;
@@ -719,12 +719,12 @@ p {
 	}
 }
 
-#fh5co-contact {
+#contact {
 
 }
 
 
-#fh5co-footer {
+#footer {
 	background: #ececec;
 	padding: 4em 0;
 	font-size: 16px;
@@ -740,13 +740,13 @@ p {
 	p{
 		margin-bottom: 10px;
 	}
-	.fh5co-footer-widget {
+	.footer-widget {
 		margin-bottom: 30px;
 		float: left;
 		width: 100%;
 	}
 }
-.fh5co-social {
+.social {
 	padding: 0;
 	margin: 0;
 	@media screen and (max-width: $screen-sm) {
@@ -808,13 +808,13 @@ p {
 			width: 100%;
 			@include transition(.8s, ease-out);
 		}
-		.fh5co-title {
+		.title {
 			font-size: 18px;
 			color: $brand-white;
 			padding: 0;
 			position: relative;
 		}
-		.fh5co-meta {
+		.meta {
 			color: rgba(255,255,255,.4);
 			font-size: 10px;
 			font-weight: 400;
@@ -849,7 +849,7 @@ p {
 }
 
 .section-heading {
-	.fh5co-section-title {
+	.section-title {
 		font-size: 11px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -861,7 +861,7 @@ p {
 	}
 }
 
-.fh5co-lead {
+.lead {
 	font-size: 26px;
 	@media screen and (max-width: $screen-sm) {
 		font-size: 20px;
@@ -877,7 +877,7 @@ p {
 }
 
 // Burger Menu
-.fh5co-nav-toggle {
+.nav-toggle {
   width: 25px;
   height: 25px;
   cursor: pointer;
@@ -914,22 +914,22 @@ p {
   }
 }
 
-.fh5co-nav-toggle i::before {
+.nav-toggle i::before {
   top: -7px;
 }
-.fh5co-nav-toggle i::after {
+.nav-toggle i::after {
   bottom: -7px;
 }
-.fh5co-nav-toggle:hover i::before {
+.nav-toggle:hover i::before {
   top: -10px;
 }
-.fh5co-nav-toggle:hover i::after {
+.nav-toggle:hover i::after {
   bottom: -10px;
 }
-.fh5co-nav-toggle.active i {
+.nav-toggle.active i {
 	background: transparent;
 }
-.fh5co-nav-toggle.active i::before {
+.nav-toggle.active i::before {
   top:0;
   -webkit-transform: rotateZ(45deg);
      -moz-transform: rotateZ(45deg);
@@ -937,7 +937,7 @@ p {
        -o-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-.fh5co-nav-toggle.active i::after {
+.nav-toggle.active i::after {
   bottom:0;
   -webkit-transform: rotateZ(-45deg);
      -moz-transform: rotateZ(-45deg);
@@ -945,7 +945,7 @@ p {
        -o-transform: rotateZ(-45deg);
           transform: rotateZ(-45deg);
 }
-.fh5co-nav-toggle {
+.nav-toggle {
   position: absolute;
   top: 8px;
   right: 15px;
@@ -967,7 +967,7 @@ p {
 
 
 // Menu bar Animate
-.fh5co-animated {
+.animated {
   -webkit-animation-duration: .3s;
   animation-duration: .3s;
   -webkit-animation-fill-mode: both;
